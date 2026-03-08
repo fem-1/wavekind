@@ -1,0 +1,68 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        cream: "#F5F0E8",
+        "cream-dark": "#EDE8DC",
+        stone: "#9B9589",
+        "stone-light": "#C8C3BA",
+        charcoal: "#1C1C1A",
+        "charcoal-soft": "#2E2E2C",
+        sage: "#6d91a3",
+        "sage-light": "#8FAFC0",
+        mint: "#57cc99",
+        "mint-light": "#7DD9AE",
+        warm: "#D4C5A9",
+      },
+      fontFamily: {
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        mono: ["var(--font-dm-mono)", "monospace"],
+      },
+      letterSpacing: {
+        widest: "0.2em",
+        "ultra-wide": "0.3em",
+      },
+      animation: {
+        "fade-up": "fadeUp 0.8s ease forwards",
+        "fade-in": "fadeIn 1s ease forwards",
+        "slide-left": "slideLeft 0.8s ease forwards",
+        float: "float 6s ease-in-out infinite",
+        "scroll-line": "scrollLine 2s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideLeft: {
+          "0%": { opacity: "0", transform: "translateX(30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        scrollLine: {
+          "0%": { transform: "scaleY(0)", transformOrigin: "top" },
+          "50%": { transform: "scaleY(1)", transformOrigin: "top" },
+          "51%": { transform: "scaleY(1)", transformOrigin: "bottom" },
+          "100%": { transform: "scaleY(0)", transformOrigin: "bottom" },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
