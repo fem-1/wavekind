@@ -125,7 +125,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Pull quote */}
+        {/* Pull quote  */}
         <div
           ref={quoteRef}
           style={{
