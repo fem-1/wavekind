@@ -5,21 +5,29 @@ import { useEffect, useRef, useState } from "react";
 const testimonials = [
   {
     quote:
-      "I've tried many healing modalities over the years, but breathwork with Wavekind unlocked something I didn't know was stuck. The gentleness, the safety, the depth — I left feeling lighter than I had in years.",
-    name: "M. Okafor",
-    location: "Toronto, ON",
+      "Yasmin is a fantastic facilitator who created a kind, loving and open environment for breathwork. Her sessions have helped me find more peace in my life, let go of negative thought patterns, release trauma and relax. I can’t recommend it enough! Everyone in the world should experience the power of breathwork, we need more Yasmins!",
+    name: "Alex Kubbinga",
   },
   {
     quote:
-      "What struck me most was how held I felt throughout the session. There was no pressure, no agenda — just a beautifully guided space to breathe, feel, and release. I'll be back.",
-    name: "S. Brennan",
-    location: "Vancouver, BC",
+      "Une magnifique rencontre avec Yasmin qui m’a accompagné à plusieurs sessions de breathwork indescriptibles et si puissantes. J’ai une entière confiance en Yasmin pour son énergie et sa bienveillance. Merci infiniment ❤️",
+    name: "Mathilde Mériguet",
   },
   {
     quote:
-      "I was skeptical at first — breathing as a healing tool seemed too simple. But something profound happened that afternoon. I now practice breathwork every day, and it has changed my life.",
-    name: "T. Nakamura",
+      "Ethereally inspiring and much needed to manage the stresses life throws at us!",
+    name: "Callum Thomas",
     location: "Online session",
+  },
+  {
+    quote:
+      "I had a private breathwork session with Yasmin last October and it was truly powerful and transformative. I came in with no expectations and no previous experience, yet I left feeling deeply grounded and renewed. Yasmin created such a safe and supportive space that allowed me to fully relax and explore the process as a first-timer. I would recommend her to anyone looking for a meaningful and healing breathwork experience. Thank you so much Yas!",
+    name: "laura croonenberghs",
+  },
+  {
+    quote:
+      "Yasmin is a wonderful facilitator! Every session is magic.",
+    name: "Pimara Soongswang",
   },
 ];
 
@@ -57,9 +65,22 @@ export default function Testimonials() {
       className="py-24 md:py-36 px-6 md:px-12 lg:px-24 bg-cream-dark"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-4 mb-16">
-          <div className="w-8 h-px bg-sage" />
-          <span className="section-label">What people say</span>
+        <div className="flex items-center justify-between mb-16">
+          <div className="flex items-center gap-4">
+            <div className="w-8 h-px bg-sage" />
+            <span className="section-label">What people say</span>
+          </div>
+          <a
+            href="https://www.trustindex.io/the-trustindex-verified-badge/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs font-mono tracking-widest uppercase text-stone/50 hover:text-sage transition-colors duration-300 border border-stone/20 hover:border-sage/40 px-2.5 py-1"
+          >
+            <svg className="w-3 h-3 text-sage" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M6 0L7.5 4.5H12L8.25 7.25L9.75 12L6 9.25L2.25 12L3.75 7.25L0 4.5H4.5L6 0Z" />
+            </svg>
+            Verified by TrustIndex
+          </a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 items-end">

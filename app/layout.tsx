@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   description:
     "Breathwork, movement, and intentional practices for those seeking deeper connection. Wavekind guides you home to yourself.",
   keywords: ["breathwork", "wellness", "conscious living", "meditation", "breathwork studio"],
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "Wavekind — Breathwork & Conscious Living",
     description:
