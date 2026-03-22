@@ -20,13 +20,18 @@ export default function Footer() {
               innate wisdom.
             </p>
             <div className="mt-6 flex gap-4">
-              {["Instagram", "Spotify", "YouTube"].map((social) => (
+              {[
+                { label: "Instagram", href: "https://www.instagram.com/wave.kind" },
+                { label: "YouTube", href: "https://www.youtube.com/@wavekindworld" },
+              ].map((social) => (
                 <a
-                  key={social}
-                  href="#"
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs tracking-widest uppercase text-stone/60 hover:text-charcoal transition-colors duration-300"
                 >
-                  {social}
+                  {social.label}
                 </a>
               ))}
             </div>
@@ -39,6 +44,7 @@ export default function Footer() {
               {[
                 { label: "Offerings", href: "#offerings" },
                 { label: "About", href: "#about" },
+                { label: "FAQs", href: "/about/faqs" },
                 { label: "Journal", href: "#journal" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (
@@ -66,7 +72,7 @@ export default function Footer() {
                   hello@wavekind.com
                 </a>
               </li>
-              <li className="text-sm text-stone/50 font-light">Toronto, Canada</li>
+              <li className="text-sm text-stone/50 font-light">London Based</li>
               <li className="text-sm text-stone/50 font-light">& Online, Worldwide</li>
             </ul>
           </div>
