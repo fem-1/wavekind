@@ -170,7 +170,7 @@ export default function Offerings() {
                     : "text-stone-light/30 -translate-x-2 opacity-0 md:opacity-100 md:translate-x-0"
                 }`}
               >
-                <Link href="#contact" className="flex items-center gap-2">
+                <Link href="/about/get-in-touch" className="flex items-center gap-2">
                   Book
                   <svg
                     className="w-4 h-4"

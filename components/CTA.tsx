@@ -24,7 +24,6 @@ export default function CTA() {
 
   return (
     <section
-      id="contact"
       ref={ref}
       style={{
         opacity: 0,
@@ -62,7 +61,7 @@ export default function CTA() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="mailto:hello@wavekind.com"
+                  href="/about/get-in-touch"
                   className="inline-flex items-center gap-3 bg-cream text-charcoal px-8 py-4 text-xs tracking-widest uppercase hover:bg-cream-dark transition-colors duration-300"
                 >
                   Get in touch
