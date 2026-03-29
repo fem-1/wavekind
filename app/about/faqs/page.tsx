@@ -248,10 +248,10 @@ export default function FaqsPage() {
             </h2>
             <p className="text-stone font-light leading-loose mb-10 max-w-xl mx-auto">
               If something isn&apos;t answered above, we&apos;d love to hear
-              from you. Reach out before you book — there are no silly
+              from you. Reach out before you book! There are no silly
               questions.
             </p>
-            <a href="/#contact" className="btn-primary bg-cream text-charcoal hover:bg-cream-dark">
+            <a href="/about/get-in-touch" className="btn-primary bg-cream text-charcoal hover:bg-cream-dark">
               Get in touch
               <svg
                 className="w-4 h-4"

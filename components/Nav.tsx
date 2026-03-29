@@ -40,6 +40,7 @@ export default function Nav() {
 
   const aboutLinks = [
     { label: "Meet The Founder", href: "/about/meet-the-founder" },
+    { label: "Get In Touch", href: "/about/get-in-touch" },
     { label: "FAQs", href: "/about/faqs" },
   ];
 
@@ -48,9 +49,7 @@ export default function Nav() {
     { label: "Journal", href: "#journal" },
   ];
 
-  const navLinksAfterAbout = [
-    { label: "Contact", href: "#contact" },
-  ];
+  const navLinksAfterAbout: { label: string; href: string }[] = [];
 
   return (
     <>

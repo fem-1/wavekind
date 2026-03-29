@@ -46,7 +46,7 @@ export default function Footer() {
                 { label: "About", href: "#about" },
                 { label: "FAQs", href: "/about/faqs" },
                 { label: "Journal", href: "#journal" },
-                { label: "Contact", href: "#contact" },
+                { label: "Contact", href: "/about/get-in-touch" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -66,10 +66,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@wavekind.com"
+                  href="/about/get-in-touch"
                   className="text-sm text-stone font-light hover:text-charcoal transition-colors duration-300"
                 >
-                  hello@wavekind.com
+                  Get in touch
                 </a>
               </li>
               <li className="text-sm text-stone/50 font-light">London Based</li>
