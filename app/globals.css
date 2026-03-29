@@ -79,6 +79,29 @@
   }
 }
 
+/* Hero animation keyframes — defined here so inline styles can reference by name */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes breatheText {
+  0%, 100% {
+    opacity: 0.7;
+    letter-spacing: -0.01em;
+  }
+  50% {
+    opacity: 1;
+    letter-spacing: 0.02em;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 4px;

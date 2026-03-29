@@ -39,6 +39,7 @@ const config: Config = {
         breathe: "breathe 8s ease-in-out infinite",
         "breathe-slow": "breathe 10s ease-in-out infinite",
         "breathe-glow": "breatheGlow 8s ease-in-out infinite",
+        "breathe-text": "breatheText 8s ease-in-out infinite 2s",
       },
       keyframes: {
         fadeUp: {
@@ -70,6 +71,10 @@ const config: Config = {
         breatheGlow: {
           "0%, 100%": { transform: "scale(0.92)", opacity: "0.4" },
           "50%": { transform: "scale(1.12)", opacity: "1" },
+        },
+        breatheText: {
+          "0%, 100%": { opacity: "0.7", letterSpacing: "-0.01em" },
+          "50%": { opacity: "1", letterSpacing: "0.02em" },
         },
       },
     },

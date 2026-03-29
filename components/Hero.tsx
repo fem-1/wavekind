@@ -69,34 +69,50 @@ export default function Hero() {
             <span className="section-label">Breathe. Feel. Return.</span>
           </div>
 
-          {/* Main headline */}
-          <h1
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-charcoal opacity-0 animate-fade-up"
-            style={{ animationDelay: "300ms", animationFillMode: "forwards" }}
-          >
-            Guided back
-            <br />
-            <span className="italic text-sage">to yourself,</span>
-            <br />
-            one breath
-            <br />
-            at a time.
+          {/* Main headline — each line staggers in */}
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-charcoal">
+            <span
+              className="block opacity-0 animate-fade-up"
+              style={{ animationDelay: "300ms", animationFillMode: "forwards" }}
+            >
+              Guided back
+            </span>
+            <span
+              className="block italic text-sage opacity-0"
+              style={{
+                animation: "fadeUp 0.8s ease forwards 500ms, breatheText 8s ease-in-out infinite 2s",
+              }}
+            >
+              to yourself,
+            </span>
+            <span
+              className="block opacity-0 animate-fade-up"
+              style={{ animationDelay: "700ms", animationFillMode: "forwards" }}
+            >
+              one breath
+            </span>
+            <span
+              className="block opacity-0 animate-fade-up"
+              style={{ animationDelay: "900ms", animationFillMode: "forwards" }}
+            >
+              at a time.
+            </span>
           </h1>
 
           {/* Subheadline */}
           <p
             className="mt-8 max-w-md text-stone font-light leading-relaxed opacity-0 animate-fade-up"
-            style={{ animationDelay: "400ms", animationFillMode: "forwards" }}
+            style={{ animationDelay: "1100ms", animationFillMode: "forwards" }}
           >
-            Wavekind offers transformative breathwork experiences — online and
-            in-person — rooted in the belief that healing begins with the breath
+            Wavekind offers transformative breathwork experiences, online and
+            in-person. Rooted in the belief that healing begins with the breath
             you already have.
           </p>
 
           {/* CTAs */}
           <div
             className="mt-12 flex flex-col sm:flex-row gap-4 sm:items-center opacity-0 animate-fade-up"
-            style={{ animationDelay: "600ms", animationFillMode: "forwards" }}
+            style={{ animationDelay: "1300ms", animationFillMode: "forwards" }}
           >
             <Link href="#offerings" className="btn-primary">
               Explore sessions
@@ -126,7 +142,7 @@ export default function Hero() {
           {/* Stats */}
           <div
             className="mt-20 flex flex-wrap gap-x-12 gap-y-6 opacity-0 animate-fade-up"
-            style={{ animationDelay: "800ms", animationFillMode: "forwards" }}
+            style={{ animationDelay: "1500ms", animationFillMode: "forwards" }}
           >
             {[
               { value: "500+", label: "Sessions held" },
