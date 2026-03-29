@@ -18,10 +18,38 @@ export default function Hero() {
         />
       </div>
 
-      {/* Decorative circle — breathing visual */}
-      <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-stone/10 animate-float opacity-40 hidden lg:block" />
-      <div className="absolute top-1/2 right-[-5%] -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-sage/15 animate-float opacity-50 hidden lg:block" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[220px] h-[220px] rounded-full bg-sage/5 animate-float hidden lg:block" style={{ animationDelay: "0.7s" }} />
+      {/* Breathing circles — concentric rings that inhale/exhale */}
+      <div
+        className="absolute top-1/2 right-[15%] hidden lg:block pointer-events-none"
+        style={{ transform: "translateY(-50%)" }}
+        aria-hidden="true"
+      >
+        {/* Outer glow */}
+        <div
+          className="absolute w-[600px] h-[600px] rounded-full bg-sage/[0.04] animate-breathe-glow"
+          style={{ left: "-300px", top: "-300px", animationDelay: "0s" }}
+        />
+        {/* Outermost ring */}
+        <div
+          className="absolute w-[520px] h-[520px] rounded-full border border-stone/[0.08] animate-breathe-slow"
+          style={{ left: "-260px", top: "-260px", animationDelay: "0.4s" }}
+        />
+        {/* Middle ring */}
+        <div
+          className="absolute w-[360px] h-[360px] rounded-full border border-sage/[0.15] animate-breathe"
+          style={{ left: "-180px", top: "-180px", animationDelay: "0.2s" }}
+        />
+        {/* Inner ring */}
+        <div
+          className="absolute w-[200px] h-[200px] rounded-full border border-sage/[0.2] animate-breathe"
+          style={{ left: "-100px", top: "-100px", animationDelay: "0s" }}
+        />
+        {/* Core fill */}
+        <div
+          className="absolute w-[80px] h-[80px] rounded-full bg-sage/[0.08] animate-breathe"
+          style={{ left: "-40px", top: "-40px", animationDelay: "0.1s" }}
+        />
+      </div>
 
       {/* Vertical label — left side */}
       <div className="absolute left-6 md:left-10 top-1/2 -translate-y-1/2 hidden lg:flex items-center gap-3">
@@ -41,34 +69,50 @@ export default function Hero() {
             <span className="section-label">Breathe. Feel. Return.</span>
           </div>
 
-          {/* Main headline */}
-          <h1
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-charcoal opacity-0 animate-fade-up"
-            style={{ animationDelay: "300ms", animationFillMode: "forwards" }}
-          >
-            Guided back
-            <br />
-            <span className="italic text-sage">to yourself,</span>
-            <br />
-            one breath
-            <br />
-            at a time.
+          {/* Main headline — each line staggers in */}
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-charcoal">
+            <span
+              className="block opacity-0 animate-fade-up"
+              style={{ animationDelay: "300ms", animationFillMode: "forwards" }}
+            >
+              Guided back
+            </span>
+            <span
+              className="block italic text-sage opacity-0"
+              style={{
+                animation: "fadeUp 0.8s ease forwards 500ms, breatheText 8s ease-in-out infinite 2s",
+              }}
+            >
+              to yourself,
+            </span>
+            <span
+              className="block opacity-0 animate-fade-up"
+              style={{ animationDelay: "700ms", animationFillMode: "forwards" }}
+            >
+              one breath
+            </span>
+            <span
+              className="block opacity-0 animate-fade-up"
+              style={{ animationDelay: "900ms", animationFillMode: "forwards" }}
+            >
+              at a time.
+            </span>
           </h1>
 
           {/* Subheadline */}
           <p
             className="mt-8 max-w-md text-stone font-light leading-relaxed opacity-0 animate-fade-up"
-            style={{ animationDelay: "400ms", animationFillMode: "forwards" }}
+            style={{ animationDelay: "1100ms", animationFillMode: "forwards" }}
           >
-            Wavekind offers transformative breathwork experiences — online and
-            in-person — rooted in the belief that healing begins with the breath
+            Wavekind offers transformative breathwork experiences, online and
+            in-person. Rooted in the belief that healing begins with the breath
             you already have.
           </p>
 
           {/* CTAs */}
           <div
             className="mt-12 flex flex-col sm:flex-row gap-4 sm:items-center opacity-0 animate-fade-up"
-            style={{ animationDelay: "600ms", animationFillMode: "forwards" }}
+            style={{ animationDelay: "1300ms", animationFillMode: "forwards" }}
           >
             <Link href="#offerings" className="btn-primary">
               Explore sessions
@@ -98,7 +142,7 @@ export default function Hero() {
           {/* Stats */}
           <div
             className="mt-20 flex flex-wrap gap-x-12 gap-y-6 opacity-0 animate-fade-up"
-            style={{ animationDelay: "800ms", animationFillMode: "forwards" }}
+            style={{ animationDelay: "1500ms", animationFillMode: "forwards" }}
           >
             {[
               { value: "500+", label: "Sessions held" },
