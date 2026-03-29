@@ -36,6 +36,9 @@ const config: Config = {
         "slide-left": "slideLeft 0.8s ease forwards",
         float: "float 6s ease-in-out infinite",
         "scroll-line": "scrollLine 2s ease-in-out infinite",
+        breathe: "breathe 8s ease-in-out infinite",
+        "breathe-slow": "breathe 10s ease-in-out infinite",
+        "breathe-glow": "breatheGlow 8s ease-in-out infinite",
       },
       keyframes: {
         fadeUp: {
@@ -59,6 +62,14 @@ const config: Config = {
           "50%": { transform: "scaleY(1)", transformOrigin: "top" },
           "51%": { transform: "scaleY(1)", transformOrigin: "bottom" },
           "100%": { transform: "scaleY(0)", transformOrigin: "bottom" },
+        },
+        breathe: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.18)" },
+        },
+        breatheGlow: {
+          "0%, 100%": { transform: "scale(0.92)", opacity: "0.4" },
+          "50%": { transform: "scale(1.12)", opacity: "1" },
         },
       },
     },

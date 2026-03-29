@@ -18,10 +18,38 @@ export default function Hero() {
         />
       </div>
 
-      {/* Decorative circle — breathing visual */}
-      <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-stone/10 animate-float opacity-40 hidden lg:block" />
-      <div className="absolute top-1/2 right-[-5%] -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-sage/15 animate-float opacity-50 hidden lg:block" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[220px] h-[220px] rounded-full bg-sage/5 animate-float hidden lg:block" style={{ animationDelay: "0.7s" }} />
+      {/* Breathing circles — concentric rings that inhale/exhale */}
+      <div
+        className="absolute top-1/2 right-[15%] hidden lg:block pointer-events-none"
+        style={{ transform: "translateY(-50%)" }}
+        aria-hidden="true"
+      >
+        {/* Outer glow */}
+        <div
+          className="absolute w-[600px] h-[600px] rounded-full bg-sage/[0.04] animate-breathe-glow"
+          style={{ left: "-300px", top: "-300px", animationDelay: "0s" }}
+        />
+        {/* Outermost ring */}
+        <div
+          className="absolute w-[520px] h-[520px] rounded-full border border-stone/[0.08] animate-breathe-slow"
+          style={{ left: "-260px", top: "-260px", animationDelay: "0.4s" }}
+        />
+        {/* Middle ring */}
+        <div
+          className="absolute w-[360px] h-[360px] rounded-full border border-sage/[0.15] animate-breathe"
+          style={{ left: "-180px", top: "-180px", animationDelay: "0.2s" }}
+        />
+        {/* Inner ring */}
+        <div
+          className="absolute w-[200px] h-[200px] rounded-full border border-sage/[0.2] animate-breathe"
+          style={{ left: "-100px", top: "-100px", animationDelay: "0s" }}
+        />
+        {/* Core fill */}
+        <div
+          className="absolute w-[80px] h-[80px] rounded-full bg-sage/[0.08] animate-breathe"
+          style={{ left: "-40px", top: "-40px", animationDelay: "0.1s" }}
+        />
+      </div>
 
       {/* Vertical label — left side */}
       <div className="absolute left-6 md:left-10 top-1/2 -translate-y-1/2 hidden lg:flex items-center gap-3">
