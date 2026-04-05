@@ -74,7 +74,7 @@ export default function Testimonials() {
             href="https://www.trustindex.io/the-trustindex-verified-badge/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-mono tracking-widest uppercase text-stone/50 hover:text-sage transition-colors duration-300 border border-stone/20 hover:border-sage/40 px-2.5 py-1"
+            className="flex items-center justify-center gap-1.5 text-xs font-mono tracking-widest uppercase text-stone/50 hover:text-sage transition-colors duration-300 border border-stone/20 hover:border-sage/40 px-2.5 py-1 text-center"
           >
             <svg className="w-3 h-3 text-sage" viewBox="0 0 12 12" fill="currentColor">
               <path d="M6 0L7.5 4.5H12L8.25 7.25L9.75 12L6 9.25L2.25 12L3.75 7.25L0 4.5H4.5L6 0Z" />
